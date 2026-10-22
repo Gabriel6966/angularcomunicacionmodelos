@@ -1,0 +1,16 @@
+<p>hijo-coche-component works!</p>
+
+<h1 style="color:blue">
+    {{coche.marca}} - {{coche.modelo}}
+</h1>
+
+<h2 [ngClass]="{
+    rojo:coche.velocidad ==0,
+    verde:coche.velocidad > 0
+}">
+
+    Velocidad actual: {{coche.velocidad}} km/h
+</h2>
+
+<button (click)="acelerarCoche()">Acelerar</button>
+<button (click)="frenarCoche()">Frenar</button>
