@@ -1,1 +1,4 @@
-<app-hijo-coche-component></app-hijo-coche-component>
+<h1>Padre component</h1>
+@for(coche of arrayCoches; track coche){
+    <app-hijo-coche-component [coche]="coche"></app-hijo-coche-component>
+}
