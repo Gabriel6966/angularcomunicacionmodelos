@@ -7,9 +7,17 @@ import { Component } from '@angular/core';
   templateUrl: './padre-deportes-component.html',
 })
 export class PadreDeportesComponent {
-   public deportes: Array<string>;
+  public deportes: Array<string>;
+  public mensaje!: string;
 
-  constructor(){
-    this.deportes=["Futbol", "Baloncesto", "Tenis", "Boxeo"]
+  seleccionarFavorito(event: string): void {
+    console.log("funciona")
+    this.mensaje = "Su deporte favorito es " + event;
   }
+
+  constructor() {
+    this.deportes = ["Futbol", "Baloncesto", "Tenis", "Boxeo"]
+  }
+
+
 }
